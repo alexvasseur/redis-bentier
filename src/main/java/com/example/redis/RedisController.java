@@ -64,7 +64,7 @@ public class RedisController {
     }
 
     @GetMapping("/load100")
-    public void load()
+    public String load()
     {
         redisTemplate.executePipelined(new RedisCallback< Object >() {
             @Override
@@ -77,6 +77,7 @@ public class RedisController {
                 return null;
             }
         } );
+        return "OK";
     }
 
     @PostMapping("/write/{key}")
