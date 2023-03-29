@@ -53,7 +53,7 @@ ab -c 25 -n 50000 localhost:8080/read
 
 You can try [this link http://localhost:8080/load100](http://localhost:8080/load100])
 and explore with [Redis Insight](http://localhost:8001) if you are running with Redis Stack.
-[Redis data in Redis Insight](img/redisinsight.png)
+![Redis data in Redis Insight](img/redisinsight.png)
 
 ## Benchmarking with JMeter
 
@@ -69,15 +69,15 @@ Fine tune the test plan
 - By default it relies on using JMeter provided ${COUNTER} monotonic counter - and assumes only one JMeter runner is being used.
 - You can use /read and /write endpoint for randomized key (at SpringBoot level)
 
-[JMeter configuration](img/jmeterconfig.png)
-[JMeter running](img/jmeterrun.png)
+![JMeter configuration](img/jmeterconfig.png)
+![JMeter running](img/jmeterrun.png)
 
 ## Exploring threads and performance with VisualVM
 
 You can use VisualVM to quickly check Heap, Thread, and if any thread is waiting for the pooled connection, or explore thread dumps.
-[VisualVM](img/visualvm.png)
+![VisualVM](img/visualvm.png)
 
 ## Exploring Java heap with Using MAT
 
 You can use Eclipse MAT to quickly check Heap dump. Here is the connections from a pool of 8.
-[Eclipse MAT Java heap dump](img/mat.png)
+![Eclipse MAT Java heap dump](img/mat.png)
